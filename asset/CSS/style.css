@@ -9,7 +9,7 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  background: url("/test2.jpg") center/cover no-repeat;
+  background: url("../img/test2.jpg") center/cover;
 }
 
 /* cài lại font chữ chung */
@@ -90,7 +90,7 @@ body {
 
 /* lớp sau cánh cửa */
 .door-frame {
-  background-image: url("../ho_den.gif");
+  background-image: url("../img/ho_den.gif");
   background-size: cover;
   background-position: center;
   width: 15rem;
