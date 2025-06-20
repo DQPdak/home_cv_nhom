@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galaxy Building Portals</title>
+    <link rel="stylesheet" href="./CSS/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="scene">
+      <div class="over">
+        <div class="hero-title">
+          <h1>ALTF4</h1>
+          <p class="hero-title-slogan light-reveal">
+            Mỗi cánh cửa dẫn bạn vào không gian portfolio khác nhau.
+          </p>
+        </div>
+        <div class="floor">
+          <div class="door-frame door_1">
+            <div class="door" onclick="location.href='/portfolio/ui-ux.html'">
+              <div class="image-frame">
+                <img src="./test.jpg" alt="Nguyễn Đức Huy" />
+              </div>
+              <div class="handle"></div>
+              <div class="label">Nguyễn Đức Huy</div>
+            </div>
+          </div>
+          <div class="door-frame door_2">
+            <div class="door" onclick="location.href='/portfolio/web-dev.html'">
+              <div class="image-frame">
+                <img src="/test.jpg" alt="Đặng Quốc Phong" />
+              </div>
+              <div class="handle"></div>
+              <div class="label">Đặng Quốc Phong</div>
+            </div>
+          </div>
+          <div class="door-frame door_3">
+            <div
+              class="door"
+              onclick="location.href='/portfolio/data-science.html'"
+            >
+              <div class="image-frame">
+                <img src="/test.jpg" alt="Nguyễn Minh Phụng" />
+              </div>
+              <div class="handle"></div>
+              <div class="label">Nguyễn Minh Phụng</div>
+            </div>
+          </div>
+          <div class="door-frame door_4">
+            <div
+              class="door"
+              onclick="location.href='/portfolio/mobile-app.html'"
+            >
+              <div class="image-frame">
+                <img src="/test.jpg" alt="Nguyễn Mạnh Cường" />
+              </div>
+              <div class="handle"></div>
+              <div class="label">Nguyễn Mạnh Cường</div>
+            </div>
+          </div>
+          <div class="door-frame door_5">
+            <div class="door" onclick="location.href='/portfolio/iot.html'">
+              <div class="image-frame">
+                <img src="/test.jpg" alt="Lê Gia Bảo" />
+              </div>
+              <div class="handle"></div>
+              <div class="label">Lê Gia Bảo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="footer-group">
+          <strong>Nhóm ALTF4</strong> |
+          <a href="https://github.com/ALTF4-Team" target="_blank"
+            >GitHub nhóm</a
+          >
+          |
+          <a href="https://your-intro-page.com" target="_blank"
+            >Trang giới thiệu</a
+          >
+        </div>
+        <div class="footer-members">
+          <span>Thành viên:</span>
+          <ul>
+            <li>
+              Nguyễn Đức Huy –
+              <a href="https://github.com/huy-portfolio" target="_blank"
+                >GitHub Portfolio</a
+              >
+            </li>
+            <li>
+              Đặng Quốc Phong –
+              <a href="https://github.com/phong-portfolio" target="_blank"
+                >GitHub Portfolio</a
+              >
+            </li>
+            <li>
+              Nguyễn Minh Phụng –
+              <a href="https://github.com/phung-portfolio" target="_blank"
+                >GitHub Portfolio</a
+              >
+            </li>
+            <li>
+              Nguyễn Mạnh Cường –
+              <a href="https://github.com/cuong-portfolio" target="_blank"
+                >GitHub Portfolio</a
+              >
+            </li>
+            <li>
+              Lê Gia Bảo –
+              <a href="https://github.com/bao-portfolio" target="_blank"
+                >GitHub Portfolio</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script>
+      // hầm thêm class load khi tải trang và xóa noskhi animation kết thúc
+      window.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll(".door-frame").forEach(function (door) {
+          door.classList.add("load");
+          // Lắng nghe khi animation kết thúc để xóa class
+          door.addEventListener("animationend", function handler(e) {
+            if (e.animationName === "doorAppear") {
+              door.classList.remove("load");
+              door.removeEventListener("animationend", handler);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
